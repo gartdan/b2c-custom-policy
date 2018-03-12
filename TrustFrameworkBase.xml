@@ -503,6 +503,7 @@
             <PersistedClaim ClaimTypeReferenceId="surname" />
             <PersistedClaim ClaimTypeReferenceId="city" />
             <PersistedClaim ClaimTypeReferenceId="extension_TermsOfService" />
+            <PersistedClaim ClaimTypeReferenceId="postalCode" />
           </PersistedClaims>
           <OutputClaims>
             <OutputClaim ClaimTypeReferenceId="objectId" />
@@ -537,6 +538,7 @@
             <OutputClaim ClaimTypeReferenceId="signInNames.emailAddress" />
             <OutputClaim ClaimTypeReferenceId="city" />
             <OutputClaim ClaimTypeReferenceId="extension_TermsOfService" />
+            <OutputClaim ClaimTypeReferenceId="postalCode" />
           </OutputClaims>
           <IncludeTechnicalProfile ReferenceId="AAD-Common" />
         </TechnicalProfile>
@@ -578,6 +580,7 @@
             <PersistedClaim ClaimTypeReferenceId="givenName" />
             <PersistedClaim ClaimTypeReferenceId="surname" />
             <PersistedClaim ClaimTypeReferenceId="city" />
+            <PersistedClaim ClaimTypeReferenceId="postalCode" />
           </PersistedClaims>
           <IncludeTechnicalProfile ReferenceId="AAD-Common" />
         </TechnicalProfile>
@@ -601,6 +604,7 @@
             <OutputClaim ClaimTypeReferenceId="givenName" />
             <OutputClaim ClaimTypeReferenceId="surname" />
             <OutputClaim ClaimTypeReferenceId="city" />
+            <OutputClaim ClaimTypeReferenceId="postalCode" />
           </OutputClaims>
           <IncludeTechnicalProfile ReferenceId="AAD-Common" />
         </TechnicalProfile>
@@ -628,6 +632,7 @@
             <InputClaim ClaimTypeReferenceId="givenName" />
             <InputClaim ClaimTypeReferenceId="surname" />
             <InputClaim ClaimTypeReferenceId="city" />
+            <InputClaim ClaimTypeReferenceId="postalCode" />
           </InputClaims>
           <OutputClaims>
             <!-- Required claims -->
@@ -638,6 +643,7 @@
             <OutputClaim ClaimTypeReferenceId="givenName" />
             <OutputClaim ClaimTypeReferenceId="surname" />
             <OutputClaim ClaimTypeReferenceId="city" />
+            <InputClaim ClaimTypeReferenceId="postalCode" />
           </OutputClaims>
           <ValidationTechnicalProfiles>
             <ValidationTechnicalProfile ReferenceId="AAD-UserWriteProfileUsingObjectId" />
@@ -674,7 +680,9 @@
             <OutputClaim ClaimTypeReferenceId="newUser" />
 
             <!-- Optional claims, to be collected from the user -->
+            <!-- 1. Adding an OOB Field -- Add Claims here to display on the register form. Order of the fields matters -->
             <OutputClaim ClaimTypeReferenceId="city" Required="true" />
+            <OutputClaim ClaimTypeReferenceId="postalCode" Required="true" />
             <OutputClaim ClaimTypeReferenceId="displayName" />
             <OutputClaim ClaimTypeReferenceId="givenName" Required="true" />
             <OutputClaim ClaimTypeReferenceId="surName" Required="true" />
