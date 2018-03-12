@@ -66,6 +66,13 @@
         <UserInputType>TextBox</UserInputType>
       </ClaimType>
 
+      <ClaimType Id="postalCode">
+        <DisplayName>Postal Code (aka ZipCode)</DisplayName>
+        <DataType>string</DataType>
+        <UserHelpText/>
+        <UserInputType>TextBox</UserInputType>
+      </ClaimType>
+
       <ClaimType Id="signInNames.emailAddress">
         <DisplayName>Email Address</DisplayName>
         <DataType>string</DataType>
